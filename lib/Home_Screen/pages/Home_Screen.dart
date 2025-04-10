@@ -1,4 +1,4 @@
-import 'package:chat_bubbles/bubbles/bubble_special_three.dart';
+import 'package:chat_bubbles/bubbles/bubble_special_one.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -106,11 +106,28 @@ class HomeScreen extends StatelessWidget {
                 child: SizedBox(
                   child: ListView.builder(
                     
-                    itemCount: 20,
+                    itemCount: 1,
                     itemBuilder: (context, index){
-                    return BubbleSpecialThree(text: "hi",
-                    color: Color(0xff789949),
-                    );
+                    return 
+                    
+                        
+                        GestureDetector(
+                          onLongPress: () {
+                            
+                          },
+                          child: BubbleSpecialOne(
+                          text: "hi",
+                          isSender: true,
+                          color: Color(0xffffffff), 
+                                textStyle: TextStyle(
+                                  fontSize: 16,
+                                  color: Color(0xff000000)
+                                ),                     
+                          ),
+                        );
+                      
+                    
+                   
                   }),
                 ),
               )
